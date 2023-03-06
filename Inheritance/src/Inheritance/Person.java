@@ -1,35 +1,38 @@
 package Inheritance;
 
 public class Person {
-    protected String name;
-    protected int age;
+    private String name;
+    private String address;
 
     /** Constructor. */
-    public Person() {};
+    public Person(String name, String address) {
+        this.name = name;
+        this.address = address;
+    }
 
     /** Constructor. */
-    public Person(int age, String name) {
-        this.age = age;
-        this.name = name;
-    }
-
-    /** setter. */
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    /** getter. */
-    public int getAge() {
-        return this.age;
-    }
-
-    /** setter. */
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /** getter. */
     public String getName() {
         return this.name;
+    }
+
+    /** Constructor. */
+    public String getAddress() {
+        return this.address;
+    }
+
+    /** Constructor. */
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    /** Constructor. */
+    public String toString() {
+        String s = "Person[name=" + getName() + ",address=" + getAddress() + "]";
+        return s;
+    }
+
+    public static void main(String[] args) {
+        Person p = new Person("Duy", "Hanoi");
+        System.out.println(p.toString());
     }
 }

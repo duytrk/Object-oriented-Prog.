@@ -34,10 +34,21 @@ public class Cylinder extends Circle {
         this.height = height;
     }
 
-    /** get volume.
-     * */
+    /** get volume. */
     public double getVolume(double radius, double height) {
         double v = radius * radius * PI * height;
         return v;
+    }
+
+    @Override
+    public String toString() {
+        String s;
+        s = "Cylinder[" + super.toString() + ",height=" + getHeight() + "]";
+        return s;
+    }
+
+    @Override
+    public double getArea() {
+        return 2 * super.getArea();
     }
 }

@@ -1,21 +1,60 @@
 package Inheritance;
 
 public class Student extends Person {
-    private String id;
+    private String program;
+    private int year;
+    private double fee;
 
-    /** constructor */
-    public Student(int age, String name, String id) {
-        super(age, name);
-        this.age = age;
+
+    /** Constructor. */
+    public Student(String name, String address,
+                   String program, int year, double fee) {
+        super(name, address);
+        this.program = program;
+        this.year = year;
+        this.fee = fee;
     }
 
-    /** setId */
-    public void setId(String id) {
-        this.id = id;
+    /** Constructor. */
+    public String getProgram() {
+        return this.program;
     }
 
-    /** getId */
-    public String getId() {
-        return this.id;
+    /** Constructor. */
+    public void setProgram(String program) {
+        this.program = program;
     }
+
+    /** Constructor. */
+    public int getYear() {
+        return this.year;
+    }
+
+    /** Constructor. */
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    /** Constructor. */
+    public double getFee() {
+        return this.fee;
+    }
+
+    /** Constructor. */
+    public void setFee(double fee) {
+        this.fee = fee;
+    }
+
+    @Override
+    public String toString() {
+        String s = "Student[" + super.toString() + ",program=" + getProgram()
+                + ",year=" + getYear() + ",fee=" + getFee() + "]";
+        return s;
+    }
+
+//    public static void main(String[] args) {
+//        Student student = new Student("Duy", "Hanoi",
+//                "Physics", 3, 12.0);
+//        System.out.println(student.toString());
+//    }
 }
